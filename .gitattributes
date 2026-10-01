@@ -1,0 +1,4 @@
+# Normalize line endings so cloning on Windows doesn't produce noisy diffs.
+* text=auto
+*.ps1 text eol=crlf
+*.png binary

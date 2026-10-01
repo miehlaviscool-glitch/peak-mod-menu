@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Doorstop</AssemblyName>
+    <RootNamespace>PeakMenu</RootNamespace>
+    <LangVersion>10</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Authors>miehlaviscool-glitch</Authors>
+    <Copyright>Copyright (c) 2026 miehlaviscool-glitch</Copyright>
+    <RepositoryUrl>https://github.com/miehlaviscool-glitch/peak-mod-menu</RepositoryUrl>
+    <!-- Pass -p:PeakDir="path\to\PEAK" to build against a different install location. -->
+    <PeakDir Condition="'$(PeakDir)' == ''">$(ProgramFiles(x86))\Steam\steamapps\common\PEAK</PeakDir>
+    <ManagedDir>$(PeakDir)\PEAK_Data\Managed</ManagedDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(ManagedDir)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(ManagedDir)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="PhotonUnityNetworking"><HintPath>$(ManagedDir)\PhotonUnityNetworking.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Zorro.Core.Runtime"><HintPath>$(ManagedDir)\Zorro.Core.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Sirenix.Serialization"><HintPath>$(ManagedDir)\Sirenix.Serialization.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Sirenix.Utilities"><HintPath>$(ManagedDir)\Sirenix.Utilities.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="PhotonRealtime"><HintPath>$(ManagedDir)\PhotonRealtime.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

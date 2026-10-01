@@ -1,0 +1,12 @@
+# build output
+bin/
+obj/
+
+# downloaded / generated tooling
+tools/
+
+# decompiled game code is the game developers' copyrighted work; never commit it
+decomp/
+
+# local logs
+*.log
